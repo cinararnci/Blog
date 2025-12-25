@@ -1,19 +1,57 @@
-backend:
-  name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
-  branch: main
+:root {
+  --coral: #ff7f6a;
+  --coral-soft: #ffd6cf;
+  --bg: #fffaf8;
+  --text: #2b2b2b;
+  --muted: #777;
+}
 
-media_folder: "assets"
-public_folder: "/assets"
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
 
-collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(var(--coral-soft), transparent);
+}
+
+header h1 {
+  color: var(--coral);
+  font-size: 2.6rem;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.post {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.date {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.read-more {
+  color: var(--coral);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+}
+
