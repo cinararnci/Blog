@@ -6,45 +6,28 @@
   --muted: #777;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
 }
 
-/* Header */
 header {
   text-align: center;
-  padding: 4rem 1rem 3rem;
-  background: linear-gradient(
-    to bottom,
-    var(--coral-soft),
-    transparent
-  );
+  padding: 4rem 1rem;
+  background: linear-gradient(var(--coral-soft), transparent);
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.6rem;
   color: var(--coral);
+  font-size: 2.6rem;
 }
 
-header p {
-  margin-top: 0.5rem;
-  color: var(--muted);
-}
-
-/* Main content */
 main {
   max-width: 700px;
   margin: auto;
-  padding: 2rem 1.2rem;
+  padding: 2rem 1rem;
 }
 
 .post {
@@ -52,11 +35,7 @@ main {
   padding: 1.8rem;
   border-radius: 14px;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-}
-
-.post h2 {
-  margin-top: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .date {
@@ -65,21 +44,13 @@ main {
 }
 
 .read-more {
-  display: inline-block;
-  margin-top: 1rem;
   color: var(--coral);
   text-decoration: none;
   font-weight: 500;
 }
 
-.read-more:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
-  font-size: 0.9rem;
   color: var(--muted);
 }
