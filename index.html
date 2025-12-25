@@ -10,36 +10,34 @@
 
 <header>
   <h1>Coral Notes</h1>
-  <p>Thoughts, builds, and quiet moments</p>
+  <p>A calm corner of the internet</p>
 </header>
 
-<main>
-  <article class="post">
-    <h2>My First Post</h2>
-    <span class="date">December 25, 2025</span>
-    <p>
-      This is a calm little space on the internet.  
-      A place to write without rushing, to share progress,
-      and to enjoy the process.
-    </p>
-    <a href="#" class="read-more">Read more →</a>
-  </article>
-
-  <article class="post">
-    <h2>Designing a Starter Base</h2>
-    <span class="date">December 20, 2025</span>
-    <p>
-      I wanted a base that felt warm and natural,
-      something that fits into the landscape instead
-      of fighting it.
-    </p>
-    <a href="#" class="read-more">Read more →</a>
-  </article>
-</main>
+<main id="posts"></main>
 
 <footer>
   <p>© 2025 Coral Notes</p>
 </footer>
 
+<script>
+fetch('posts/index.json')
+  .then(res => res.json())
+  .then(posts => {
+    const container = document.getElementById('posts');
+    posts.reverse().forEach(post => {
+      const article = document.createElement('article');
+      article.className = 'post';
+      article.innerHTML = `
+        <h2>${post.title}</h2>
+        <span class="date">${post.date}</span>
+        <p>${post.excerpt}</p>
+        <a class="read-more" href="${post.url}">Read more →</a>
+      `;
+      container.appendChild(article);
+    });
+  });
+</script>
+
 </body>
 </html>
+
