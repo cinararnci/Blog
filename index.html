@@ -1,43 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Coral Notes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <title>Admin</title>
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
 </head>
 <body>
-
-<header>
-  <h1>Coral Notes</h1>
-  <p>A calm corner of the internet</p>
-</header>
-
-<main id="posts"></main>
-
-<footer>
-  <p>© 2025 Coral Notes</p>
-</footer>
-
-<script>
-fetch('posts/index.json')
-  .then(res => res.json())
-  .then(posts => {
-    const container = document.getElementById('posts');
-    posts.reverse().forEach(post => {
-      const article = document.createElement('article');
-      article.className = 'post';
-      article.innerHTML = `
-        <h2>${post.title}</h2>
-        <span class="date">${post.date}</span>
-        <p>${post.excerpt}</p>
-        <a class="read-more" href="${post.url}">Read more →</a>
-      `;
-      container.appendChild(article);
-    });
-  });
-</script>
-
 </body>
 </html>
-
