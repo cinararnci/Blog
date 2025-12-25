@@ -1,0 +1,85 @@
+:root {
+  --coral: #ff7f6a;
+  --coral-soft: #ffd6cf;
+  --bg: #fffaf8;
+  --text: #2b2b2b;
+  --muted: #777;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  background: linear-gradient(
+    to bottom,
+    var(--coral-soft),
+    transparent
+  );
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  color: var(--coral);
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+/* Main content */
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem 1.2rem;
+}
+
+.post {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.post h2 {
+  margin-top: 0;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--coral);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
